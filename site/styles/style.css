@@ -1,0 +1,59 @@
+body{
+    background-image: url("../images/back.jpg");
+    background-size: cover;
+    margin: 0;
+    margin: 20px;
+}
+header{
+    background-color: white;
+    opacity: 0.9;
+    padding: 20px;
+    margin: 10px;
+    font-size: 30pt;
+    text-align: center;
+}
+.main{
+    margin: 10px;
+    height: 600px;
+}
+.avatar{
+    display: inline;
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+.aboutme{
+    display: inline;
+    width: calc(60% - 10px);
+    margin-left: 10px;
+    float: left;
+    height: 100%;
+}
+.name{
+    background-color: white;
+    opacity:0.9;
+    height: 20%;
+    padding: 30px;
+    font-size: 67.5pt;
+    text-align: center;
+}
+.info{
+    margin: 5px 0px 0px 0px;
+    background-color: white;
+    opacity: 0.9;
+    float: left;
+    width: calc(calc(100% - 50px) / 2);
+    height: calc(70% - 25px);
+    font-size: 20pt;
+    padding: 10px;
+}
+.preference{
+    margin: 5px 0px 0px 0px;
+    background-color: white;
+    opacity: 0.9;
+    float: right;
+    width: calc(calc(100% - 50px) / 2);
+    height: calc(70% - 25px);
+    font-size: 20pt;
+    padding: 10px;
+}
