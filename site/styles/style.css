@@ -1,43 +1,49 @@
-body{
+body {
     background-image: url("../images/back.jpg");
     background-size: cover;
     margin: 0;
     margin: 20px;
 }
-header{
+
+header {
+    display: flex;
     background-color: white;
     opacity: 0.9;
     padding: 20px;
     margin: 10px;
-    font-size: 30pt;
-    text-align: center;
+    font-size: 15pt;
 }
-.main{
+
+.main {
     margin: 10px;
     height: 600px;
 }
-.avatar{
+
+.avatar {
     display: inline;
     float: left;
     width: 40%;
     height: 100%;
 }
-.aboutme{
+
+.aboutme {
     display: inline;
     width: calc(60% - 10px);
     margin-left: 10px;
     float: left;
     height: 100%;
 }
-.name{
+
+.name {
     background-color: white;
-    opacity:0.9;
+    opacity: 0.9;
     height: 20%;
     padding: 30px;
     font-size: 67.5pt;
     text-align: center;
 }
-.info{
+
+.info {
     margin: 5px 0px 0px 0px;
     background-color: white;
     opacity: 0.9;
@@ -47,7 +53,8 @@ header{
     font-size: 20pt;
     padding: 10px;
 }
-.preference{
+
+.preference {
     margin: 5px 0px 0px 0px;
     background-color: white;
     opacity: 0.9;
@@ -56,4 +63,24 @@ header{
     height: calc(70% - 25px);
     font-size: 20pt;
     padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: .6s;
+}
+
+header > span > a {
+    padding: 3px;
+}
+
+header > span > a:hover {
+    background-color: blanchedalmond;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+header > span {
+    margin-left: 15px;
 }

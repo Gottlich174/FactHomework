@@ -1,0 +1,87 @@
+.element {
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.pink {
+    background-color: #ffc0cb;
+}
+
+.blue {
+    background-color: #7df9ff;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.name {
+    height: 70%;
+    width: 30%;
+    text-align: left;
+    display: inline-block;
+    float: left;
+    font-size: 25pt;
+}
+
+.digit {
+    width: calc(70% - 5px);
+    height: 70%;
+    text-align: right;
+    display: inline-block;
+    float: left;
+    font-size: 11pt;
+}
+
+.fullname {
+    width: 100%;
+    height: 30%;
+    text-align: left;
+    font-size: 15pt;
+}
+
+td, tr {
+    width: 100px;
+    height: 70px;
+}
+
+caption {
+    font-size: 20pt;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.element:hover {
+    transform: scale(1.3);
+    border: 2px solid black;
+    transition: .3s;
+}
+
+.bluename {
+    height: 70%;
+    width: 30%;
+    display: inline-block;
+    float: left;
+    font-size: 25pt;
+    text-align: right;
+}
+
+.bluedigit {
+    width: calc(70% - 5px);
+    height: 70%;
+    text-align: left;
+    display: inline-block;
+    float: left;
+}
+
+.bluefullname {
+    float: left;
+    width: 100%;
+    text-align: right;
+}
+
+/* bluedigit и bluenamesp, bluefullname для элементов, у которых буквы справа, а цифры слева*/
