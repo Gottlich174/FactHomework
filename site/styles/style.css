@@ -1,7 +1,6 @@
 body {
     background-image: url("../images/back.jpg");
     background-size: cover;
-    margin: 0;
     margin: 20px;
 }
 
@@ -44,7 +43,7 @@ header {
 }
 
 .info {
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0 0 0;
     background-color: white;
     opacity: 0.9;
     float: left;
@@ -55,7 +54,7 @@ header {
 }
 
 .preference {
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0 0 0;
     background-color: white;
     opacity: 0.9;
     float: right;
@@ -83,4 +82,69 @@ header > span > a:hover {
 
 header > span {
     margin-left: 15px;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, .9);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container1 img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 6px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container1 > div {
+    display: flex;
+    padding: 10px;
+    flex: 1;
+    align-content: center;
+    flex-direction: column;
+    background-color: aqua;
+    justify-content: space-around;
+}
+
+.container1 span {
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 12pt;
+    padding: 4px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 10px 20px 10px;
+    grid-gap: 30px;
+    background-color: rgba(255, 255, 255, .9);
+    padding: 10px;
+}
+
+.container2 img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 6px;
+}
+
+.container2 > div {
+    padding: 8px;
+    background-color: aqua;
+}
+
+.container2 > div > div {
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20pt;
+    padding: 4px;
 }
