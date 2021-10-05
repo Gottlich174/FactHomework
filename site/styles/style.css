@@ -1,7 +1,7 @@
 body {
     background-image: url("../images/back.jpg");
     background-size: cover;
-    margin: 20px;
+    margin: 1%;
 }
 
 header {
@@ -9,61 +9,52 @@ header {
     background-color: white;
     opacity: 0.9;
     padding: 20px;
-    margin: 10px;
-    font-size: 15pt;
+    margin: 0.5%;
+    font-size: 120%;
 }
-
 .main {
-    margin: 10px;
-    height: 600px;
+    margin: 0.5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-.avatar {
-    display: inline;
-    float: left;
-    width: 40%;
-    height: 100%;
+.avatar{
+    width: 37%;
+    height: auto;
+    padding: 5%;
+    background-color: rgba(255,255,255,0.9);
+    }
+.avatar > img{
+    border-radius: 15px;
 }
-
-.aboutme {
-    display: inline;
-    width: calc(60% - 10px);
-    margin-left: 10px;
-    float: left;
-    height: 100%;
+.aboutme{
+    width: calc(51% + 20px);
 }
-
-.name {
-    background-color: white;
-    opacity: 0.9;
-    height: 20%;
-    padding: 30px;
-    font-size: 67.5pt;
+.info{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 74.5%;
+}
+.name{
+    background-color: rgba(255,255,255,0.9);
     text-align: center;
+    height: 25%;
+    margin-bottom: 0.5%;
+    font-size: 200%;
 }
-
-.info {
-    margin: 5px 0 0 0;
-    background-color: white;
-    opacity: 0.9;
-    float: left;
-    width: calc(calc(100% - 50px) / 2);
-    height: calc(70% - 25px);
-    font-size: 20pt;
-    padding: 10px;
+.hobby{
+    background-color: rgba(255,255,255,0.9);
+    width: calc(99.5% / 2);
+    font-size: 100%;
 }
-
-.preference {
-    margin: 5px 0 0 0;
-    background-color: white;
-    opacity: 0.9;
-    float: right;
-    width: calc(calc(100% - 50px) / 2);
-    height: calc(70% - 25px);
-    font-size: 20pt;
-    padding: 10px;
+.preference{
+    background-color: rgba(255,255,255,0.9);
+    width: calc(99.5% / 2);
+    height: 100%;
 }
-
 a {
     text-decoration: none;
     color: black;
@@ -88,6 +79,7 @@ header > span {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    flex-wrap: wrap;
     background-color: rgba(255, 255, 255, .9);
     text-align: center;
     padding: 10px;
@@ -147,4 +139,57 @@ header > span {
     border-radius: 5px;
     font-size: 20pt;
     padding: 4px;
+}
+@media screen and (max-width: 700px){
+    .container2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        margin: 10px 10px 20px 10px;
+        grid-gap: 30px;
+        background-color: rgba(255, 255, 255, .9);
+        padding: 10px;
+    }
+    .avatar{
+        width: 100%;
+        height: auto;
+        padding: 5%;
+        background-color: rgba(255,255,255,0.9);
+        align-content: center;
+    }
+    .info{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 74.5%;
+        margin-top: 5px;
+        font-size: 50%;
+    }
+    .aboutme{
+        width: 100%;
+    }
+    .name{
+        font-size: 100%;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1100px){
+    .avatar{
+        width: 100%;
+        height: auto;
+        padding: 5%;
+        background-color: rgba(255,255,255,0.9);
+        align-content: center;
+    }
+    .info{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 74.5%;
+        margin-top: 5px;
+    }
+    .aboutme{
+        width: 100%;
+    }
 }
