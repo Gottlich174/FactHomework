@@ -147,7 +147,6 @@ header > span {
         grid-template-columns: 1fr;
         margin: 10px 10px 20px 10px;
         grid-gap: 30px;
-        background-color: rgba(255, 255, 255, .9);
         padding: 10px;
     }
     .avatar{
@@ -178,7 +177,6 @@ header > span {
         width: 100%;
         height: auto;
         padding: 5%;
-        background-color: rgba(255,255,255,0.9);
         align-content: center;
     }
     .info{
@@ -192,4 +190,21 @@ header > span {
     .aboutme{
         width: 100%;
     }
+}
+.a_night{
+    text-decoration: none;
+    color: white;
+    transition: .6s;
+}
+.a_night:hover{
+    background-color: darkblue;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.avatar_night{
+    width: 37%;
+    height: auto;
+    padding: 5%;
+    background-color: rgba(0,0,0,0.9);
 }
