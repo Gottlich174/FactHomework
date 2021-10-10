@@ -12,6 +12,7 @@ header {
     margin: 0.5%;
     font-size: 120%;
 }
+
 .main {
     margin: 0.5%;
     display: flex;
@@ -19,42 +20,50 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.avatar{
+
+.avatar {
     width: 37%;
     height: auto;
     padding: 5%;
-    background-color: rgba(255,255,255,0.9);
-    }
-.avatar > img{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.avatar > img {
     border-radius: 15px;
 }
-.aboutme{
+
+.aboutme {
     width: calc(51% + 20px);
 }
-.info{
+
+.info {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
     height: 74.5%;
 }
-.name{
-    background-color: rgba(255,255,255,0.9);
+
+.name {
+    background-color: rgba(255, 255, 255, 0.9);
     text-align: center;
     height: 25%;
     margin-bottom: 0.5%;
     font-size: 200%;
 }
-.hobby{
-    background-color: rgba(255,255,255,0.9);
+
+.hobby {
+    background-color: rgba(255, 255, 255, 0.9);
     width: calc(99.5% / 2);
     font-size: 100%;
 }
-.preference{
-    background-color: rgba(255,255,255,0.9);
+
+.preference {
+    background-color: rgba(255, 255, 255, 0.9);
     width: calc(99.5% / 2);
     height: 100%;
 }
+
 a {
     text-decoration: none;
     color: black;
@@ -140,7 +149,8 @@ header > span {
     font-size: 20pt;
     padding: 4px;
 }
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 700px) {
     .container2 {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -149,14 +159,16 @@ header > span {
         grid-gap: 30px;
         padding: 10px;
     }
-    .avatar{
+
+    .avatar {
         width: 100%;
         height: auto;
         padding: 5%;
-        background-color: rgba(255,255,255,0.9);
+        background-color: rgba(255, 255, 255, 0.9);
         align-content: center;
     }
-    .info{
+
+    .info {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -165,21 +177,25 @@ header > span {
         margin-top: 5px;
         font-size: 50%;
     }
-    .aboutme{
+
+    .aboutme {
         width: 100%;
     }
-    .name{
+
+    .name {
         font-size: 100%;
     }
 }
-@media screen and (min-width: 701px) and (max-width: 1100px){
-    .avatar{
+
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+    .avatar {
         width: 100%;
         height: auto;
         padding: 5%;
         align-content: center;
     }
-    .info{
+
+    .info {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -187,24 +203,27 @@ header > span {
         height: 74.5%;
         margin-top: 5px;
     }
-    .aboutme{
+
+    .aboutme {
         width: 100%;
     }
 }
-.a_night{
+
+.a_night {
     text-decoration: none;
     color: white;
     transition: .6s;
 }
-.a_night:hover{
+
+.a_night:hover {
     background-color: darkblue;
     transition: 0.3s;
     border-radius: 2px;
 }
 
-.avatar_night{
+.avatar_night {
     width: 37%;
     height: auto;
     padding: 5%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
