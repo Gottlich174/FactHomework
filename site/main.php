@@ -16,7 +16,7 @@ else
     echo '<body>'
 ?>
 <?
-require ('header.php');
+require('header.php');
 ?>
 <div class="main">
     <div <?
@@ -29,7 +29,6 @@ require ('header.php');
                 alt="Упс... Что-то пошло не так"
                 height=100%
         >
-
     </div>
     <div class="aboutme">
         <div class="name" <?
@@ -43,15 +42,30 @@ require ('header.php');
             <div class="hobby" <?
             if (($hour < 8) or ($hour >= 20)) echo 'style="background-color: rgba(0,0,0,0.8);"';
             ?>>
-            <span>Я имею большое количество увлечений, но больше всего я предпочитаю баскетбол, им я занимаюсь более 10 лет, и спортивное программирование, которое привлекло меня не так давно.
-            Обучаюсь на втором курсе по программе "Прикладная информатика", работаю в фитнес-клубе администратором.
-            </span>
+            <div>
+<?
+                $str="Я имею большое количество увлечений, но больше всего я предпочитаю баскетбол, им я занимаюсь более 10 лет, и спортивное программирование, которое привлекло меня не так давно.
+                Обучаюсь на втором курсе по программе 'Прикладная информатика', работаю в фитнес-клубе администратором.";
+                $num = strpos($str, '.');
+                echo "<text style='color: red'>".mb_substr($str, 0, $num + 1)."</text>". substr($str, $num+1);
+?>
+            </div>
             </div>
             <div class="preference" <?
             if (($hour < 8) or ($hour >= 20)) echo 'style="background-color: rgba(0,0,0,0.8);"';
             ?>>
-            <span>Весь материал преподаётся доступно для всех. И даже тот факт, что я уже имел опыт работы с HTML, CSS, Git и др.,
-             не делает их менее интересным. С удовольствием выполняю домашние работы. Надеюсь мы все будем продолжать в том же духе и достигнем определённых высот в Web-разработке!</span>
+                <div>
+                    <?
+                   $str ="Весь материал преподаётся доступно для всех. И даже тот факт, что я уже имел опыт работы с HTML,
+                    CSS, Git и др.,
+                    не делает их менее интересным. С удовольствием выполняю домашние работы. Надеюсь мы все будем
+                    продолжать в том же духе и достигнем определённых высот в Web-разработке!";
+                   $strarr = explode(' ', $str);
+                   foreach ($strarr as $num => $value)
+                       if ($num % 2 == 0) echo "<text style='color: blue'>".$value."</text> ";
+                       else echo "<text style='color: yellow'>".$value."</text> ";
+                    ?>
+                </div>
             </div>
         </div>
     </div>
@@ -135,6 +149,26 @@ if (($hour < 8) or ($hour >= 20)) echo '<body style="background-color: rgba(0,0,
         </div>
     </div>
 </div>
-<footer></footer>
+<footer <? if (($hour < 8) or ($hour >= 20)) echo "style='background-color: rgba(0,0,0,0.8);'";
+?>>
+    <?
+    require ('counter.php');
+    ?>
+    <div>
+        <form name="DataDif" method="post">
+            <label>Выберите дату:</label>
+                <input type="date" name="hb" value="<?php echo date('d.m.Y');?>"
+                       max="2021-10-07">
+                <input type="submit" value="OK">
+        </form>
+    </div>
+    <div>
+        Текущая дата: <?
+        $hb = date('d.m.Y', strtotime($_POST['hb']));
+        echo date("d.m.Y")."</div>";
+        echo "<div>Дата рождения: ".$hb."</div>";
+        echo "<div> Прошло дней: ".$dateDiff = date_diff(new DateTime(), new DateTime($hb))->days."</div>";
+        ?>
+</footer>
 </body>
 </html>
