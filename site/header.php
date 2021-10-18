@@ -24,6 +24,9 @@ darktheme($hour);
     <span><a href="arrays/arrays.php" target="_blank" <?
         darkthememenuitem($hour);
         ?>>Массивы</a> </span>
+    <span><a href="authorise.php" target="_blank" <?
+        darkthememenuitem($hour);
+        ?>>Авторизоваться</a> </span>
 </header>
 </body>
 </html>
