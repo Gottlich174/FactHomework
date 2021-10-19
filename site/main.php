@@ -1,4 +1,8 @@
 <?
+session_save_path($_SERVER['DOCUMENT_ROOT'] . '/tmp');
+session_start();
+//session_unset для удаления данных сессии и session_destroy для удаления самой сессии
+//Код для смены темы лежит в хэдере, на кнопку применить приходится жать по 2 раза, не смог найти решение :(
 $hour = date("H");
 function darktheme($hour)
 {
@@ -62,6 +66,13 @@ function tellaboutyself()
     <title>About me</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+<style>
+    body {
+        background-image: url("../images/<?if (isset($_SESSION['theme'])) echo $_SESSION['theme']; else echo "techno.jpg";?>");
+        background-size: cover;
+        margin: 1%;
+    }
+</style>
 <?
 dbody($hour);
 ?>

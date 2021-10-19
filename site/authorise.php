@@ -1,3 +1,7 @@
+<?
+session_save_path($_SERVER['DOCUMENT_ROOT'] . '/tmp');
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,19 +13,17 @@
 </head>
 <style>
     body{
-        background-image: url("images/back.jpg");
+        background-image: url("../images/<?if (isset($_SESSION['theme'])) echo $_SESSION['theme']; else echo "techno.jpg";?>");
         background-size: cover;
         margin: 1%;
+    height: 100%;
     }
 </style>
 <body>
-
-</body>
-</html>
 <?
 $str = '';
 ?>
-    <div style="border: solid 2px; border-radius: 20px; padding: 20px; background-color: rgba(255, 255, 255, 0.9);">
+    <div style="height: 100%; border: solid 2px; border-radius: 20px; padding: 20px; background-color: rgba(255, 255, 255, 0.9);">
         <div style="align-content: center">
 
             <h1 style="align-content: center; text-align: center">Авторизация</h1>
@@ -52,13 +54,23 @@ $str = '';
                 </p>
             </form>
             <a href="main.php" style = "text-decoration: none; color: black;"><button style="width: 100%;">Вернуться на главную</button></a>
+
         </div>
     </div>
-
+<?//Задание от 18.10, без использования JS ничего придумать не смог(?>
+<form name ="lastlink">
+<button onclick= window.open("https://fact.digital/") name ="lastlink" value = 'Fact' style="width: 40%; display: inline-block; float: left; margin: 10px;">ФАКТ</button>
+<button onclick= window.open("https://www.bitrix24.ru") name ="lastlink" value = 'Bitrix' style="width: 40%; display: inline-block; float: right; margin: 10px;">Битрикс</button>
+</form>
+<?
+if (isset($_GET['lastlink']))
+    $_SESSION['lastlink'] = $_GET['lastlink'];
+?>
 <?php
 $login = $_POST['login'];
 if ((md5(trim($_POST['password'])) == 'd4b94369bf6574e95eb80df2f202ca80') && (md5(trim($_POST['login'])) == 'e3afed0047b08059d0fada10f400c1e5'))
-    echo "
+   {
+       echo "
     <div style = 'position: fixed; text-align: center; align-content: center; width: 100%; top: 0; right:0; left: 0; bottom: 0; height: 100%; z-index: 100; background-color: rgba(0, 0, 0 , 0.8);'>
     <div style='background-color: white; border: solid 2px; border-radius: 10px;
     margin: 10px 40px 0px 40px'>
@@ -72,6 +84,8 @@ if ((md5(trim($_POST['password'])) == 'd4b94369bf6574e95eb80df2f202ca80') && (md
 </div>
     </div>
     ";
+       setcookie('auth', 1, 0);
+   }
 elseif ((count($_POST) > 0) && (($_POST['login'] == '') || ($_POST['password']) == ''))
     echo "
     <div style = 'position: fixed; text-align: center; align-content: center; width: 100%; top: 0; right:0; left: 0; bottom: 0; height: 100%; z-index: 100; background-color: rgba(0, 0, 0 , 0.8);'>
@@ -103,3 +117,5 @@ if (isset($_GET)) {
     mail('kaisermgntv@gmail.com', 'Comment', $str);
 }
 ?>
+</body>
+</html>
